@@ -1,0 +1,109 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en" >
+<html>
+	<head>
+		<title>RoboSharp > ReadMe</title>
+		<style>
+			body, td, p, h2, h3
+			{
+				font-family: Verdana, Helvetica, sans-serif;
+				font-size: xx-small;
+				line-height: 14px;
+				color: #666666;
+			}
+			
+			h1.pagetitle
+			{
+				margin-top: 17px;
+				margin-bottom:5px;
+				font-size: large;
+				line-height: 32px;
+				color: #1000DA;
+			}
+			
+			h1
+			{
+				font-size: small;
+				color: #1000DA;
+			}
+
+			h2, h3
+			{
+				margin-bottom: 2px;
+			}
+
+			h2
+			{
+				font-size: x-small;
+				font-weight: bold;
+			}
+
+			a, a:hover, a:visited
+			{
+				color: #1000DA;
+			}
+
+			a
+			{
+				text-decoration: none;
+			}
+
+			a:hover
+			{
+				text-decoration: underline;
+			}
+		</style>
+	</head>
+	<body bottommargin="0" topmargin="0" leftmargin="0" rightmargin="0" marginheight="0" marginwidth="0" bgcolor="#000000">
+		<table width="750" height="100%" cellpadding="0" cellspacing="0" border="0" align="center" bgcolor="#ffffff">
+			<tr>
+				<td width="20">&nbsp;</td>
+				<td width="670" valign="top">
+					<p>&nbsp;</p>
+					<p align="center"><img src="logo.bmp"></p>
+					<br>
+								<h1>What is RoboSharp?</h1>
+								<p>RoboSharp is a C# port of RoboCode. RoboCode is a Java game that allows robots to
+								be designed in Java and then pitted against other robots in a battle. The beauty
+								of the RoboCode design is that each robot runs in its own thread and is sandboxed
+								so that it cannot interfere with other robots. My RoboSharp implementation uses
+								this same architecture, but coded entirely within the .Net framework and using
+								as many features as possible from the .Net class libraries.</p>
+								<p>The main features of RoboSharp are as follows:
+								<ul>
+									<li>Built-in Robot Editor that can open, save, and compile robots. One feature
+									that was very easy to add in, thanks to .Net, was the ability to choose which language
+									the robot is written in - this can be either C# or Visual Basic. Thanks to the dynamic
+									compilation abilities of .Net, implementing this editor / compiler was fairly
+									straightforward.</li>
+									<li>RoboSharp uses the Reflection classes in .Net to load robots dynamically from
+									the DLL produced by the Robot Editor.</li>
+									<li>The user can select which robots they wish to take part in a particular
+									battle. These robots are then each loaded into their own thread and given a timeslice
+									(usually 3 milliseconds) in which to update themselves each frame.</li>
+									<li>During battles, properties for each robot are shown on the right of the screen
+									using a property grid.</li>
+									<li>When events such as scanning a robot or hitting a wall are identified, each robot
+									receives a notification of this event and can optionally choose to respond to it.</li>
+									<li>Each robot can set its own colour. There is, in fact, only one bitmap for the robot,
+									but the colour is changed by modulating each pixel colour to achieve the desired colour.</li>
+									<li>Collision detection between robots and robots, and between robots and bullets.</li>
+								</ul>
+								</p>
+								
+								<h1>Loading RoboSharp</h1>
+								<p>RoboSharp can be loaded by double-clicking on RoboSharp.exe in the Executable folder.</p>
+								
+																<h1>Why RoboSharp?</h1>
+								<p>I wrote RoboSharp to show that C# and GDI+ are a viable platform for 2D games. As a side-effect,
+								RoboSharp also shows that .Net is more flexible than Java - for instance, the ability to use either
+								Visual Basic or C# to program robots.</p>
+								<h1>Writing Your Own Robot</h1>
+								<p>To write your own robot, load the Robot Editor by clicking on Robot > Editor in the main menu.
+								The easiest way to proceed would be to open one of the sample robots. These are in the Executable\Robots folder.</p>
+				<br>
+				</td>
+				<td width="20">&nbsp;</td>
+			</tr>
+		</table>
+  </body>
+</html>
